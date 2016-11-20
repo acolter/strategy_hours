@@ -25,7 +25,7 @@ strategy_hours <- function() {
   total_hours <- sum(all_hours$Number.of.Hours)
   
   # calculate the total billable hours worked by the strategists
-  billable_hours <- sum(billable_hours$Number.of.Hours)
+  total_billable_hours <- sum(billable_hours$Number.of.Hours)
 
   # create csv files for all hours worked and billable hours worked
   write.csv(all_hours, file="all_hours.csv")
@@ -33,7 +33,7 @@ strategy_hours <- function() {
   
   # print it all out
   print(paste("Total hours worked by strategists:", total_hours))
-  print(paste("Billable hours worked by strategists:", billable_hours))
+  print(paste("Billable hours worked by strategists:", total_billable_hours))
   print(paste("All strategists are in the Tock file:", (length(strategists) == length(strategists_in_tock))))
   
 }
