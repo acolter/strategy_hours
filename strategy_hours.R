@@ -33,7 +33,7 @@ strategy_hours <- function() {
   
   # print it all out
   print(paste("Total hours worked by strategists:", total_hours))
-  print(paste("Billable hours worked by strategists:", total_billable_hours))
+  print(paste("Total billable hours worked by strategists:", total_billable_hours))
   print(paste("All strategists are in the Tock file:", (length(strategists) == length(strategists_in_tock))))
   
 }
