@@ -1,10 +1,12 @@
 strategy_hours <- function() {
   
-  # read in the files from https://tock.18f.gov/reports/ and put in your working directory. 
-  # you'll need to be an authorized user to access the files.
-  tock_df <- read.csv("2016-11-13.csv") 
-  users_df <- read.csv("user_data.csv")
-  projects_df <- read.csv("projects.csv")
+  # download the following files from https://tock.18f.gov/reports/ each time you want to run this function 
+  # you'll need to be an authorized user to access the files
+  # put them in your working directory
+  # read in the files
+  tock_df <- read.csv("2016-11-13.csv") # grab the latest file from "Reports by weekly reporting period"
+  users_df <- read.csv("user_data.csv") # under "List of all users"
+  projects_df <- read.csv("projects.csv") # under "List of all projects"
   
   # create a list of strategists, use that to subset all strategist hours from the Tock data
   strategists_df <- users_df[users_df$unit %in% "Chapters-Strategists" & users_df$current_employee %in% "True",]
