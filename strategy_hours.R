@@ -27,6 +27,9 @@ strategy_hours <- function() {
   # calculate the total billable hours worked by the strategists
   total_billable_hours <- sum(billable_hours$Number.of.Hours)
 
+  # calculate the percentage billable
+  percent_billable <- total_billable_hours / total_hours
+
   # create csv files for all hours worked and billable hours worked
   write.csv(all_hours, file="all_hours.csv")
   write.csv(billable_hours, file="billable_hours.csv")
@@ -34,6 +37,7 @@ strategy_hours <- function() {
   # print it all out
   print(paste("Total hours worked by strategists:", total_hours))
   print(paste("Total billable hours worked by strategists:", total_billable_hours))
+  print(paste("Percentage of billable hours worked:", percent_billable))
   print(paste("All strategists are in the Tock file:", (length(strategists) == length(strategists_in_tock))))
   
 }
