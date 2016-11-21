@@ -40,4 +40,5 @@ strategy_hours <- function() {
   print(paste("Percentage of billable hours worked:", percent_billable))
   print(paste("All strategists are in the Tock file:", (length(strategists) == length(strategists_in_tock))))
   
+  
 }
