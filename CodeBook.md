@@ -1,5 +1,5 @@
 # Code Book
-This code book will describs the variables, the data, and any transformations or work performed to clean up the data.
+This code book will describs the variables, the data, and any transformations or work performed to clean up the data. As the data was tidy to begin with , no work was done to clean the data.
 
 The slim_timecard_bulk.csv file contains the timesheet information from Tock. It includes the following variables: 
 - project_name
