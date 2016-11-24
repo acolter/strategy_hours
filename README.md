@@ -7,8 +7,10 @@ To use it, download three files from the Tock Reports at https://tock.18f.gov/re
 - projects.csv
 
 Call the function using: 
-  source("strategy_hours_bulk.R")
-  strategy_hours(end_date)
+
+<code>source("strategy_hours_bulk.R")</code>
+
+<code>strategy_hours(end_date)</code>
 
 Format the argument for the function using yyyy-mm-dd for the week ending date of the week you want (e.g., "2016-11-19"). The function will return the total number of hours and total number of billable hours entered by Strategists in Tock. The total billable hours does not include any projects listed as "FY17 Acquisition Svcs Billable." 
 
