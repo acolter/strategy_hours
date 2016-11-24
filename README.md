@@ -6,7 +6,11 @@ To use it, download three files from the Tock Reports at https://tock.18f.gov/re
 - user_data.csv
 - projects.csv
 
-Open strategy_hours_bulk.R in RStudio, select the entire function and run it in the console. Call the function by typing in strategy_hours("yyyy-mm-dd") where "yyyy-mm-dd" is the week ending date of the week you want (e.g., "2016-11-19"). The function will return the total number of hours and total number of billable hours entered by Strategists in Tock. The total billable hours does not include any projects listed as "FY17 Acquisition Svcs Billable." 
+Call the function using: 
+  source("strategy_hours_bulk.R")
+  strategy_hours(end_date)
+
+Format the argument for the function using yyyy-mm-dd for the week ending date of the week you want (e.g., "2016-11-19"). The function will return the total number of hours and total number of billable hours entered by Strategists in Tock. The total billable hours does not include any projects listed as "FY17 Acquisition Svcs Billable." 
 
 The function will write two csv files to your working directory:   
 - all_hours.csv
