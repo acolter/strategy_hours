@@ -1,7 +1,7 @@
 # Strategy Hours README.md
-I wrote this script to find out the number of billable hours the Strategy team at 18F is clocking each week. This repo does not include either the raw data from the Tock reports or the output from the function.
+I wrote this script to find out the number of billable hours the Strategy team at 18F is clocking each week. This repo does not include either the raw data from the Tock reports or the output from the function. You must be a member of 18F to access the Tock files. 
 
-To use it, download three files from the Tock Reports at https://tock.18f.gov/reports/ and put them in your working directory: 
+To use the function, download three files from the Tock Reports at https://tock.18f.gov/reports/ and put them in your working directory: 
 - [slim_timecard_bulk.csv] (https://tock.18f.gov/reports/slim_timecard_bulk.csv?after=2016-10-01)
 - [user_data.csv] (https://tock.18f.gov/reports/user_data.csv)
 - [projects.csv] (https://tock.18f.gov/reports/projects.csv)
