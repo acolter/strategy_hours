@@ -13,8 +13,8 @@ strategy_hours <- function(end_date) {
                              & users_df$current_employee %in% "True",]
   strategists <- as.vector(strategists_df[,1])
   strategists_hours <- tock_df[tock_df$employee %in% strategists 
-                               & tock_df$end_date %in% end_date,]
-  strategists_hours <- strategists_hours[!(strategists_hours$hours_spent %in% "0"),]
+                               & tock_df$end_date %in% end_date
+                               & !(tock_df$hours_spent %in% "0"),]
   
   # create a list of billable projects that don't include acq
   projects <- projects_df[projects_df$billable %in% "True" 
