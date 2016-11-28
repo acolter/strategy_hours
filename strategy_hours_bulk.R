@@ -4,7 +4,7 @@ strategy_hours <- function(end_date) {
   # you'll need to be an authorized user to access the files
   # put them in your working directory
   # read in the files
-  tock_df <- read.csv("slim_timecard_bulk.csv")
+  tock_df <- read.csv("slim_timecard_bulk.csv") # from the "Complete timecard data with fewer fields: FY2017" link
   users_df <- read.csv("user_data.csv") # from the "List of all users" link
   projects_df <- read.csv("projects.csv") # from the "List of all projects" link
   
