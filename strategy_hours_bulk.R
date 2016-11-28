@@ -40,7 +40,7 @@ strategy_hours <- function(end_date) {
   # print it all out
   print(paste("Total hours worked by strategists:", total_hours))
   print(paste("Billable hours worked by strategists:", total_billable_hours))
-  print(paste("Billable percentage:", percent_billable))
+  print(paste("Billable percentage:", sprintf("%1.0f%%", 100*percent_billable)))
 
   }
 
