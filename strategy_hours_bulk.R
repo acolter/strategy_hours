@@ -16,9 +16,11 @@ strategy_hours <- function(end_date) {
                                & tock_df$end_date %in% end_date
                                & !(tock_df$hours_spent %in% "0"),]
   
-  # create a list of billable projects that don't include acq
+  # create a list of billable projects that don't include acq, Federalist or PIF
   projects <- projects_df[projects_df$billable %in% "True" 
-                          & !(projects_df$profit_loss_account %in% "FY17 Acquisition Svcs Billable"),]
+                          & !(projects_df$profit_loss_account %in% "FY17 Acquisition Svcs Billable") 
+                          & !(grepl("Federalist",projects_df$name)) 
+                          & !(grepl("PIF",projects_df$name)),]
   billable_projects <- as.vector(projects[,3])
   billable_hours <- strategists_hours[strategists_hours$project_name %in% billable_projects,]
 
