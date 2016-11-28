@@ -30,6 +30,9 @@ strategy_hours <- function(end_date) {
   # calculate the total billable hours worked by the strategists
   total_billable_hours <- sum(billable_hours$hours_spent)
  
+  # calculate the percentage billable
+  percent_billable <- total_billable_hours / total_hours
+
   # create csv files for all hours worked and billable hours worked
   write.csv(strategists_hours, file="all_hours.csv")
   write.csv(billable_hours, file="billable_hours.csv")
@@ -37,6 +40,7 @@ strategy_hours <- function(end_date) {
   # print it all out
   print(paste("Total hours worked by strategists:", total_hours))
   print(paste("Billable hours worked by strategists:", total_billable_hours))
+  print(paste("Billable percentage:", percent_billable))
 
   }
 
