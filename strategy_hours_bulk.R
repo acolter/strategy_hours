@@ -16,6 +16,9 @@ strategy_hours <- function(end_date) {
                                & tock_df$end_date %in% end_date
                                & !(tock_df$hours_spent %in% "0"),]
   
+  # sort the dataframe by employee
+  strategists_hours <- strategists_hours[order(strategists_hours$employee),]
+  
   # create a list of billable projects that don't include acq, Federalist or PIF
   projects <- projects_df[projects_df$billable %in% "True" 
                           & !(projects_df$profit_loss_account %in% "FY17 Acquisition Svcs Billable") 
