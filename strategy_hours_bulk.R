@@ -19,9 +19,9 @@ strategy_hours <- function(end_date) {
   # sort the dataframe by employee
   strategists_hours <- strategists_hours[order(strategists_hours$employee),]
   
-  # create a list of billable projects that don't include acq, Federalist or PIF
+  # create a list of billable projects that don't include TTS Acq, Federalist or PIF
   projects <- projects_df[projects_df$billable %in% "True" 
-                          & !(projects_df$profit_loss_account %in% "FY17 Acquisition Svcs Billable") 
+                          & !(grepl("TTS Acq",projects_df$name)) 
                           & !(grepl("Federalist",projects_df$name)) 
                           & !(grepl("PIF",projects_df$name)),]
   billable_projects <- as.vector(projects[,3])
