@@ -18,14 +18,14 @@ The function will write two csv files to your working directory:
 - all_hours.csv
 - billable_hours.csv
 
-You can import these into a spreadsheet to see which strategists worked on what projects for how many hours. The billable_hours.csv file shows which strategists worked on what billable projects for how many hours. The chapter's goal is to reach 482 billable hours per week.  
+You can import these into a spreadsheet to see which strategists worked on what projects for how many hours. The billable_hours.csv file shows which strategists worked on what billable projects for how many hours. The chapter's goal is to reach 441 billable hours per week.  
 
 ## Script
 strategy_hours_bulk.R performs the following operations:
 - Takes the user_data file and subsets the users who are Chapters-Strategists and current employees
 - Turns that dataframe of users into a list of strategists
 - Takes the slim_timecard_bulk file and subsets the users who are in the list of strategists, who have timecards for the week specified, and who have worked more than zero hours on a project
-- Takes the projects.csv file and subsets the projects that are billable, leaving out any TTS Acq projects
+- Takes the projects.csv file and subsets the projects that are billable, leaving out any TTS Acq, PIF and Federalist projects
 - Turns the dataframe of billable projects into a list 
 - Produces a list of strategists who have worked on billable projects
 - Calculates the total billable hours
