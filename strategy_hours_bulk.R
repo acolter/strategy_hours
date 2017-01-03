@@ -47,7 +47,7 @@ strategy_hours <- function(end_date) {
   print(paste("Total hours recorded by strategists:", total_hours))
   print(paste("Billable hours recorded by strategists:", total_billable_hours))
   print(paste("Billable percentage:", sprintf("%1.0f%%", 100*percent_billable)))
-  print(paste("Number of hours off chapter goal:", chapter_goal - total_billable_hours))
+  print(paste("Number of hours off chapter goal:", total_billable_hours - chapter_goal))
 
   }
 
