@@ -41,7 +41,7 @@ strategy_hours <- function(end_date) {
   write.csv(billable_hours, file="billable_hours.csv")
   
   # chapter goal
-  chapter_goal <- 418
+  chapter_goal <- 415
   
   # print it all out
   print(paste("Total hours recorded by strategists:", total_hours))
