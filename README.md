@@ -18,7 +18,7 @@ The function will write two csv files to your working directory:
 - all_hours.csv
 - billable_hours.csv
 
-You can import these into a spreadsheet to see which strategists worked on what projects for how many hours. The billable_hours.csv file shows which strategists worked on what billable projects for how many hours. The chapter's goal is to reach 418 billable hours per week.  
+You can import these into a spreadsheet to see which strategists worked on what projects for how many hours. The billable_hours.csv file shows which strategists worked on what billable projects for how many hours. The chapter's goal is to reach 415 billable hours per week.  
 
 ## Script
 strategy_hours_bulk.R performs the following operations:
