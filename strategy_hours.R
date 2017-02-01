@@ -40,13 +40,15 @@ strategy_hours <- function(end_date) {
   write.csv(strategists_hours, file="all_hours.csv")
   write.csv(billable_hours, file="billable_hours.csv")
   
-  # chapter goal
-  chapter_goal <- 342
+  # chapter cost recovery and planned revenue goals
+  cr_hours_goal <- 398
+  pr_hours_goal <- 301
   
   # print it all out
   print(paste("Total hours recorded by strategists:", total_hours))
   print(paste("Billable hours recorded by strategists:", total_billable_hours))
   print(paste("Billable percentage:", sprintf("%1.0f%%", 100*percent_billable)))
-  print(paste("Number of hours off chapter goal:", total_billable_hours - chapter_goal))
+  print(paste("Hours off chapter cost recovery goal:", total_billable_hours - cr_hours_goal))
+  print(paste("Hours off chapter planned revenue goal:", total_billable_hours - pr_hours_goal))
 
   }
